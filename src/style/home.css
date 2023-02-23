@@ -1,0 +1,132 @@
+.hero__section {
+  background: var(--hero-bg);
+}
+
+.hero_content h2 {
+  color: var(--primary-color);
+  font-size: 2.5rem;
+  font-weight: 600;
+  margin: 20px 0px;
+}
+
+.hero_content p {
+  color: var(--primary-color);
+  line-height: 28px;
+}
+
+.hero_content p:nth-child(1) {
+  font-weight: 500;
+}
+
+.buy__btn {
+  border: none;
+  outline: none;
+  padding: 8px 20px;
+  border-radius: 5px;
+  background: var(--primary-color);
+  color: #fff;
+  cursor: pointer;
+  font-size: 1rem;
+  margin-top: 40px;
+}
+
+.hero__img img {
+  width: 600px;
+  height: 300px;
+}
+
+.hero_content {
+  padding-top: 45px;
+}
+
+.section__title {
+  color: var(--primary-color);
+  font-weight: 600;
+}
+
+.timer__count {
+  background: var(--primary-color);
+  height: 300px;
+}
+
+.timer__count img {
+  weight: 500px !important;
+  height: 400px !important;
+  object-fit: contain;
+  padding-bottom: 200px;
+}
+
+.store__btn {
+  background: #fff !important;
+  color: var(--primary-color);
+  font-weight: 600;
+  padding: 8px 20px;
+  border-radius: 5px;
+}
+
+.store__btn a:hover {
+  color: var(--primary-color);
+}
+
+@media only screen and (max-width: 992px) {
+  .hero__content h2 {
+    font-size: 2rem;
+    padding-block: 12px;
+  }
+  .section__title {
+    font-size: 1.7rem;
+  }
+  .counter__img {
+    display: none;
+  }
+  .clock__top-content {
+    text-align: center;
+  }
+  .clock__top-content h4 {
+    fonst-size: 0.9rem !important;
+  }
+  .clock__top-content h3 {
+    fonst-size: 1rem !important;
+  }
+
+  .count__down-col {
+    text-align: center;
+    display: inline-block;
+  }
+}
+
+@media only screen and (max-width: 768px) {
+  .hero__content h2 {
+    font-size: 1.6rem;
+  }
+  .hero__content p {
+    font-size: 0.9rem;
+  }
+
+  .buy__btn a {
+    font-size: 0.9rem;
+  }
+  .hero__img img {
+    width: 300px;
+    height: 300px;
+    margin-bottom: 50px;
+  }
+  .section__title {
+    font-size: 1.4rem;
+  }
+}
+
+@media only screen and (max-width: 576px) {
+  .hero__content {
+    padding-top: 0;
+    margin-bottom: 40px;
+  }
+  .buy__btn {
+    font-size: 0.7rem;
+  }
+  .hero__img img {
+    width: 380px;
+    height: 340px;
+    margin-top: 50px;
+  }
+}
