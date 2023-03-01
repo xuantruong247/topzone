@@ -5,6 +5,7 @@ import { NavLink } from "react-router-dom";
 import userIcon from "../../assets/images/img/user-icon.png";
 import "./header.css";
 import { motion } from "framer-motion";
+import { useSelector } from "react-redux";
 
 const nav__links = [
   {
@@ -24,6 +25,8 @@ const nav__links = [
 const Header = () => {
   const headerRef = useRef(null);
 
+  const totalQuantity = useSelector((state) => state.cart.totalQuantity);
+
   const menuRef = useRef(null);
 
   const stickyHeaderFunc = () => {
@@ -34,7 +37,7 @@ const Header = () => {
       ) {
         headerRef.current.classList.add("sticky__header");
       } else {
-        headerRef.current.classList.remote("sticky__header");
+        headerRef.current.classList.remove("sticky__header");
       }
     });
   };
@@ -57,7 +60,7 @@ const Header = () => {
             <NavLink to="/">
               <div className="logo">
                 <img src={logo} alt="logo" />
-                <div>
+                <div style={{ textDecoration: "none" }}>
                   <h1>
                     <span>T</span>
                     <span>o</span>
@@ -76,6 +79,7 @@ const Header = () => {
                 {nav__links.map((item, index) => (
                   <li className="nav__items" key={index}>
                     <NavLink
+                      style={{ textDecoration: "none" }}
                       to={item.path}
                       className={(navClass) =>
                         navClass.isActive ? "nav__link" : ""
@@ -95,7 +99,7 @@ const Header = () => {
               </span>
               <span className="cart__icon">
                 <i className="ri-shopping-bag-line"></i>
-                <span className="badge">1</span>
+                <span className="badge">{totalQuantity}</span>
               </span>
               <span>
                 <motion.img

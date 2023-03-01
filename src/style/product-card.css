@@ -1,10 +1,13 @@
 .product__item {
   cursor: pointer;
+  background: var(--hero-bg);
+  border-radius: 10px;
 }
 
 .product__img img {
-  width: 200px;
+  width: 240px;
   height: 200px;
+  padding-left: 40px;
 }
 
 .product__info h3 {
@@ -14,12 +17,20 @@
   margin-top: 15px;
 }
 
+.product__name a {
+  color: #000;
+  text-decoration: none;
+}
+
 .product__info a:hover {
   color: inherit;
 }
 
 .product__info span {
   font-size: 0.9rem;
+}
+
+.product__card-bottom {
 }
 
 .product__card-bottom .price {
@@ -53,6 +64,6 @@
 
 @media only screen and (max-width: 576px) {
   .product__img img {
-    margin-left:100px
+    margin-left: 100px;
   }
 }
